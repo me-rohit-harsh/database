@@ -1,4 +1,4 @@
-# database
+# Connect Java code from database using Hibernate and JDBC 
 Know how to connect java code from database using JDBC and Hibernate in simple steps
 
 
@@ -106,5 +106,7 @@ Step 2. Establish a connection
 	con.close();
 
 
+
+# ***🌟Give Star If you find this helpful and thank you :)🌟***
 
 
