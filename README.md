@@ -17,6 +17,7 @@ Step 1. Add two dependencies (First one is of hibernate and second is MySQL conn
 			<version>8.0.33</version>
 		</dependency>
 Step 2. Create hibernate.cfg.xml file in “src/main/java”  and add this code
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
@@ -27,8 +28,7 @@ Step 2. Create hibernate.cfg.xml file in “src/main/java”  and add this code
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver
 		</property>
 		<!-- MySQL database connection URL -->
-		<property       							name="hibernate.connection.url">jdbc:mysql://localhost:3306/DB_name?serverTimezone=UTC
-</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/DB_name?serverTimezone=UTC</property>
 		<!-- MySQL database username -->
 		<property name="hibernate.connection.username"> username </property>
 		<!-- MySQL database password -->
@@ -43,9 +43,10 @@ Step 2. Create hibernate.cfg.xml file in “src/main/java”  and add this code
 		<mapping class="PATH OF Entity File"></mapping>
 	</session-factory>
 </hibernate-configuration>
+
 Step 3. Create java file in main package and then 
 		// 1.Create a Hibernate SessionFactory
-		SessionFactory factory = new 		Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 		// 2.Open a new session
 		Session session = factory.openSession(); 
 		// To save the object we need to create the object first
@@ -68,8 +69,10 @@ Step 3. Create java file in main package and then
 		System.out.println("Succesfully executed");
 		// 4.Close the Hibernate SessionFactory 
 		factory.close();
+  
 Connecting Database from java using JDBC (Java API) maven
 Step 1. Add MySQL-connector-j dependency in POM.XML file.
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 		<dependency>
@@ -78,7 +81,9 @@ Step 1. Add MySQL-connector-j dependency in POM.XML file.
 			<version>8.0.33</version>
 		</dependency>
 	</dependencies>
+ 
 Step 2. Establish a connection
+
 	// 1.Establish Connection 
 	Connection con = 	DriverManager.getConnection("jdbc:mysql://localhost:3306/bank", 	"UserName", "Password");
 	// 2.create a statement
@@ -98,5 +103,7 @@ Step 2. Establish a connection
 		}
 	// 7. Closing the connection
 	con.close();
+
+
 
 
