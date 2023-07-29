@@ -2,7 +2,8 @@
 Know how to connect java code from database using JDBC and Hibernate in simple steps
 
 
-Connecting Database from java using a Hibernate framework of java with maven.
+Connecting Database from java using a Hibernate framework of java with maven. 
+<br>
 Step 1. Add two dependencies (First one is of hibernate and second is MySQL connector) in POM.XML file with in Dependencies tag.
 <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
@@ -72,6 +73,7 @@ Step 3. Create java file in main package and then
 		factory.close();
   
 Connecting Database from java using JDBC (Java API) maven
+<br>
 Step 1. Add MySQL-connector-j dependency in POM.XML file.
 
 	<dependencies>
