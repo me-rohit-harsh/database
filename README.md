@@ -88,7 +88,7 @@ Step 1. Add MySQL-connector-j dependency in POM.XML file.
 Step 2. Establish a connection
 
 	// 1.Establish Connection 
-	Connection con = 	DriverManager.getConnection("jdbc:mysql://localhost:3306/bank", 	"UserName", "Password");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","UserName", "Password");
 	// 2.create a statement
 	Statement stmt = con.createStatement();
 	// 3.Write the query
