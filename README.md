@@ -18,11 +18,11 @@ Step 1. Add two dependencies (First one is of hibernate and second is MySQL conn
 		</dependency>
 Step 2. Create hibernate.cfg.xml file in “src/main/java”  and add this code
 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE hibernate-configuration PUBLIC
 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-<hibernate-configuration>
+	<hibernate-configuration>
 	<session-factory>
 		<!-- MySQL database driver class -->
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver
@@ -42,9 +42,10 @@ Step 2. Create hibernate.cfg.xml file in “src/main/java”  and add this code
 		<!-- Mapping configuration for the BankUser class -->
 		<mapping class="PATH OF Entity File"></mapping>
 	</session-factory>
-</hibernate-configuration>
+	</hibernate-configuration>
 
 Step 3. Create java file in main package and then 
+
 		// 1.Create a Hibernate SessionFactory
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 		// 2.Open a new session
